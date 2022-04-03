@@ -1,7 +1,6 @@
 package utils;
 
 import com.fasterxml.uuid.Generators;
-import org.apache.commons.lang.RandomStringUtils;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -19,69 +18,64 @@ public class TestDataGenerator {
     private TestDataGenerator() {
     }
 
-    public static long number() {
-        var offset = rand.nextInt() * 1000 + 1;
-        return System.currentTimeMillis() + offset;
-    }
-
-    public static String generateRandomEmail() {
-        var timestamp = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
-        return "test+" + timestamp + "@gmail.com";
-
-    }
-
-    public static String generateEncodedEmail() {
-        var MAIL = generateRandomEmail();
-        return MAIL.replaceAll("\\+", "%2B");
-    }
-
-    //futureDateWithDays - aanpassen
-    public static String futureDate(int days, String format) {
-        var now = LocalDateTime.now();
-        var date = now.plusDays(days);
-        var dateTimeFormatter = DateTimeFormatter.ofPattern(format);
-        return dateTimeFormatter.format(date);
-    }
-
-    //    Kijken of deze weg kan of hernoemen naar 'now'
-    public static LocalDate currentDate() {
-        return LocalDate.now();
-    }
-
 
     public static String generateDrink() {
-        StringBuilder sb = new StringBuilder();
+//  Below is an example. Please write a method which generates dynamically random names
+//  You could for example use 'StringBuilder()'
 
-        // create an object of Random class & specify length of random string
+        String drinkName = "Something";
+        return drinkName;
+    }
+
+
+    public static String generateRandomEmail() {
+//  Below is an example. Please write a method which generates dynamically random emails
+        return "test@gmail.com";
+    }
+
+    public static int generateNextInt(){
         Random random = new Random();
-        int length = 7;
-
-        for(int i = 0; i < length; i++) {
-            // generate random index number
-            int index = random.nextInt(alphabet.length());
-            // get character specified by index from the string
-            char randomChar = alphabet.charAt(index);
-            sb.append(randomChar);
-        }
-        return sb.toString();
+        int bound = 10;
+        int i = random.nextInt(bound);
+        return i;
     }
 
-    public static String generateUUID() {
-        var uuid1 = Generators.timeBasedGenerator().generate();
-        return uuid1.toString();
-    }
-
-    public static String generateTimeStamp() {
-        return new Timestamp(LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)).toString();
-    }
-
-    public static int generateRandomInt() {
-        return rand.nextInt(MAX_RANDOM - 1) + 1;
-    }
-
-    @SuppressWarnings("unused")
-    public static String generateRandomAlphaNumeric() {
-        return RandomStringUtils.randomAlphanumeric(LENGTH).toUpperCase();
-    }
+//    public static long number() {
+//        var offset = rand.nextInt() * 1000 + 1;
+//        return System.currentTimeMillis() + offset;
+//    }
+//
+//
+//    public static String generateEncodedEmail() {
+//        var MAIL = generateRandomEmail();
+//        return MAIL.replaceAll("\\+", "%2B");
+//    }
+//
+//    //futureDateWithDays - aanpassen
+//    public static String futureDate(int days, String format) {
+//        var now = LocalDateTime.now();
+//        var date = now.plusDays(days);
+//        var dateTimeFormatter = DateTimeFormatter.ofPattern(format);
+//        return dateTimeFormatter.format(date);
+//    }
+//
+//    //    Kijken of deze weg kan of hernoemen naar 'now'
+//    public static LocalDate currentDate() {
+//        return LocalDate.now();
+//    }
+//
+//
+//    public static String generateUUID() {
+//        var uuid1 = Generators.timeBasedGenerator().generate();
+//        return uuid1.toString();
+//    }
+//
+//    public static String generateTimeStamp() {
+//        return new Timestamp(LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)).toString();
+//    }
+//
+//    public static int generateRandomInt() {
+//        return rand.nextInt(MAX_RANDOM - 1) + 1;
+//    }
 
 }

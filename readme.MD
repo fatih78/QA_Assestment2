@@ -1,21 +1,25 @@
+# NOTE:
+The FrameWork is already pre-filled.
+You need to write some Java util methods by yourself
+You need to write out the Karate features by yourself
+You need to build the report layer by yourself
+You need to write a Runner Class by yourself
+
+
 # Code en Running your SpringBoot Application
+Run your local application with class 'DemoApplication'
+It will start up a local endPoint 'http://localhost:8000/' with some data
 
-Run your application with class 'DemoApplication'
-Class 'Drink' contains the entities you're about to create
-Interface 'RestRepository' is needed for any CRUD operations for the partical table!
+# Used e2e BDD TestCases with Karate
+karateGET.feature && karateCRUD.feature
 
-# Properties
+# Write some helper / util methods for populating some dynamic values in the karate scenario's
 
-Property below means that this is a memory Database, you need to start your applicatin first!
-spring.datasouce.url=jdbc:h2:mem:drinks
 
 # Viewing JSON Data from browser
-
 Navigate to url below and see your JSON data:
 http://localhost:8080/drinks
 
-Navigate to url below to CRUD your data from this url
-http://localhost:8080/explorer/index.html#uri=/
 
 # Remarks
 
@@ -34,11 +38,7 @@ restAssured
 
 mockMvc
 
-# Used e2e BDD TestCases with Karate
-karateGET.feature && karateCRUD.feature
-Start up your endpoint
-Run TestRunnerKarate.java
-See index.html in the genrated 'cucumber-report' directory
+
 
 # DevTools
 brew install maven >> to install maven
