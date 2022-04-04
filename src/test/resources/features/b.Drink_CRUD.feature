@@ -1,10 +1,15 @@
-Feature: CRUD actions with Static Values
+Feature: CRUD actions with Dynamic Values
 
   Background:
     * url baseUrl
 
   #  Data - json files
     * def inputData = read('classpath:inputData/newDrink.json')
+
+ #    Variable's from Helper class 'TestDataGenerator':
+    * def newDrink = testData.generateDrink()
+    * def email = testData.generateRandomEmail()
+    * def id = testData.generateNextInt()
 
   @CreateNewDrink
   Scenario: 1 - create extra set of data
