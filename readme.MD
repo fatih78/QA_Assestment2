@@ -10,6 +10,11 @@
 * Use 'Scenario: 2 - get extra set of data' to get and assert the extra set of data >> Status 200
 * Use 'Scenario: 3 - delete extra set of data and validate deletion' to delete and validate 'deletion' of the extra set data >> Status 204
 
+### TEST_CASE2:
+* Navigate to folder 'src/main/java/utils/TestDataGenerator.java'
+* Use method 'generateDrink()' to write code which returns dynamic names (any String values)
+* Use method 'generateRandomEmail()' to write code which returns dynamic e-mail addresses 
+* Use method 'generateNextInt()' to write code which returns dynamic int values (int bound = 10)
 
 ### Write some helper / util methods for populating some dynamic values in the karate scenario's
 * To Do
