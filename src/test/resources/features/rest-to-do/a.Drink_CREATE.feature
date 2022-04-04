@@ -1,10 +1,7 @@
-@karate
 Feature: Testing CREATE of the Drinks
 
   Background:
     * url baseUrl
-#   zonder global config file 'karate-config.js'
-#    * def baseUrl = 'http://localhost:8000/'
 
   #  Data - json files
     * def testData = Java.type('utils.TestDataGenerator')
