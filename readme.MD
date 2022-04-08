@@ -34,7 +34,7 @@
   * WHEN I use method 'generateDrink()' to generate random drink names (String values)
   * THEN I expect random drink names are generated (write a unit test for this method)
   * WHEN I use method 'generateRandomEmail()' to generate random emails
-  * THEN I expect random e-mails are generated (write a unit test for this method)
+  * THEN I expect random emails are generated (write a unit test for this method)
   * WHEN I use method 'generateNextInt()' to generate random Int values
   * THEN I expect random Int values are generated (write a unit test for this method)
 
@@ -56,7 +56,7 @@
 * Navigate to folder 'src/test/java/runners/TestRunnerKarate.java'
 * Tip, write out the code in this class
 
-* SCENARIO4: Run all testcases via the TestRunnerKarate class
+* SCENARIO4: Run all testcases (a.Drink_CRUD.feature && b.Drink_CRUD.feature) via the TestRunnerKarate class
   * GIVEN the Endpoint is running
   * WHEN I run all testcases via the TestRunnerKarate class
   * THEN karate report(s) are generated with test results
