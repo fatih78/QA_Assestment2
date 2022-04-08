@@ -15,6 +15,7 @@
 ### TEST_CASE1
 * Navigate to folder 'src/test/resources/features/a.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
+* Use STATIC values (hardcoded) to enrich the json body
 
 * SCENARIO1: Create a new Drink object with STATIC values, Get- & Delete the new object
   * GIVEN the Endpoint is running
@@ -27,7 +28,6 @@
 ### TEST_CASE2
 * Navigate to folder 'src/main/java/utils/TestDataGenerator.java'
 * Navigate to folder 'src/test/java/unitTest/UnitTests.java'
-* Use STATIC values (hardcoded) to enrich the json body
 
 * SCENARIO2: Write methods to generate random- drink names, emails and Int values
   * GIVEN the project is imported and build without errors
