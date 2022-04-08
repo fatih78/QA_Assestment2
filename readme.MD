@@ -9,6 +9,7 @@
 * Run your local application with class 'DemoApplication'
 * It will start up a local endPoint 'http://localhost:8000/' with some data
 * Navigate to the endPoint after starting it: 'http://localhost:8000/' or 'http://localhost:8000/drinks'
+* The purpose of this Assessment is to write out the testcases below
 * The FrameWork is already pre structured in folders
 
 ------------------------------------------------------------------------------------------------------------------------
