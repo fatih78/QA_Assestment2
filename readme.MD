@@ -1,5 +1,7 @@
 ### Initial Setup
 * Clone repository 'https://github.com/fatih78/QA_Assestment2.git'
+* Preferably use IntelliJ
+* It's a maven project setup
 * Create you own branche with an own name
 
 
