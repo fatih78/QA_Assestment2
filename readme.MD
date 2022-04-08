@@ -52,16 +52,16 @@
 ### TEST_CASE5:
 * Navigate to folder 'src/test/java/runners/TestRunnerKarate.java'
 * Tip, write out the code in this class
-####Scenario: Run 'TEST_CASE3' via the TestRunnerKarate class
+####Scenario: Run all testcases via the TestRunnerKarate class
 * GIVEN the Endpoint is running
-* WHEN I run 'TEST_CASE3' via the TestRunnerKarate class
-* THEN the testcase has run
-* THEN karate report(s) are generated
+* WHEN I run all testcases via the TestRunnerKarate class
+* THEN karate report(s) are generated with test results
 
 
 ------------------------------------------------------------------------------------------------------------------------
 ### Finally
 * Push your code to your branche
+* Include also the testreport from 'TEST_CASE5'
 
 
 
