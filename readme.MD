@@ -15,47 +15,51 @@
 ### TEST_CASE1
 * Navigate to folder 'src/test/resources/features/a.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
-####Scenario: Create a new Drink object with STATIC values, Get- & Delete the new object
-* GIVEN the Endpoint is running
-* WHEN I add a new (drink)product
-* THEN the product is available on the Endpoint with all the added fields (assertions)
-* WHEN I delete the added product
-* THEN the product is NOT available on the Endpoint (assertions)
+
+* SCENARIO1: Create a new Drink object with STATIC values, Get- & Delete the new object
+  * GIVEN the Endpoint is running
+  * WHEN I add a new (drink)product
+  * THEN the product is available on the Endpoint with all the added fields (assertions)
+  * WHEN I delete the added product
+  * THEN the product is NOT available on the Endpoint (assertions)
 
 ------------------------------------------------------------------------------------------------------------------------
 ### TEST_CASE2
 * Navigate to folder 'src/main/java/utils/TestDataGenerator.java'
 * Navigate to folder 'src/test/java/unitTest/UnitTests.java'
 * Use STATIC values (hardcoded) to enrich the json body
-####Scenario: Write methods to generate random- drink names, emails and Int values
-* GIVEN the project is imported and build without errors
-* WHEN I use method 'generateDrink()' to generate random drink names (String values)
-* THEN I expect random drink names are generated (write a unit test for this method)
-* WHEN I use method 'generateRandomEmail()' to generate random emails
-* THEN I expect random e-mails are generated (write a unit test for this method)
-* WHEN I use method 'generateNextInt()' to generate random Int values
-* THEN I expect random Int values are generated (write a unit test for this method)
+
+* SCENARIO2: Write methods to generate random- drink names, emails and Int values
+  * GIVEN the project is imported and build without errors
+  * WHEN I use method 'generateDrink()' to generate random drink names (String values)
+  * THEN I expect random drink names are generated (write a unit test for this method)
+  * WHEN I use method 'generateRandomEmail()' to generate random emails
+  * THEN I expect random e-mails are generated (write a unit test for this method)
+  * WHEN I use method 'generateNextInt()' to generate random Int values
+  * THEN I expect random Int values are generated (write a unit test for this method)
 
 ------------------------------------------------------------------------------------------------------------------------
 ### TEST_CASE3
 * Navigate to folder 'src/test/resources/features/b.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
 * Use DYNAMIC values from the generated methods from 'TEST_CASE2' to enrich the json body
-####Scenario: Create a new Drink object with DYNAMIC values, Get- & Delete the new object 
-* GIVEN the Endpoint is running
-* WHEN I add a new (drink)product
-* THEN the product is available on the Endpoint with all the added fields (assertions)
-* WHEN I delete the added product
-* THEN the product is NOT available on the Endpoint (assertions)
+
+* SCENARIO3: Create a new Drink object with DYNAMIC values, Get- & Delete the new object 
+  * GIVEN the Endpoint is running
+  * WHEN I add a new (drink)product
+  * THEN the product is available on the Endpoint with all the added fields (assertions)
+  * WHEN I delete the added product
+  * THEN the product is NOT available on the Endpoint (assertions)
 
 ------------------------------------------------------------------------------------------------------------------------
-### TEST_CASE5:
+### TEST_CASE4:
 * Navigate to folder 'src/test/java/runners/TestRunnerKarate.java'
 * Tip, write out the code in this class
-####Scenario: Run all testcases via the TestRunnerKarate class
-* GIVEN the Endpoint is running
-* WHEN I run all testcases via the TestRunnerKarate class
-* THEN karate report(s) are generated with test results
+
+* SCENARIO4: Run all testcases via the TestRunnerKarate class
+  * GIVEN the Endpoint is running
+  * WHEN I run all testcases via the TestRunnerKarate class
+  * THEN karate report(s) are generated with test results
 
 
 ------------------------------------------------------------------------------------------------------------------------
