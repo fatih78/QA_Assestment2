@@ -15,7 +15,7 @@
 ### TEST_CASE1
 * Navigate to folder 'src/test/resources/features/a.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
-####Scenario: Create a new Drink object with static values, Get- & Delete the new object
+####Scenario: Create a new Drink object with STATIC values, Get- & Delete the new object
 * GIVEN the Endpoint is running
 * WHEN I add a new (drink)product
 * THEN the product is available on the Endpoint with all the added fields (assertions)
@@ -40,8 +40,8 @@
 ### TEST_CASE3
 * Navigate to folder 'src/test/resources/features/b.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
-* Use DYNAMIC values from the generated methods above to enrich the json body
-####Scenario: Create a new Drink object with static values, Get- & Delete the new object 
+* Use DYNAMIC values from the generated methods from 'TEST_CASE2' to enrich the json body
+####Scenario: Create a new Drink object with DYNAMIC values, Get- & Delete the new object 
 * GIVEN the Endpoint is running
 * WHEN I add a new (drink)product
 * THEN the product is available on the Endpoint with all the added fields (assertions)
