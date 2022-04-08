@@ -65,7 +65,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 ### Finally
 * Push your code to your branche
-* Include also the testreport from 'TEST_CASE5'
+* Include also the testreport from 'TEST_CASE4'
 
 
 
