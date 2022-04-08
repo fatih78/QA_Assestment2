@@ -11,37 +11,55 @@
 * Navigate to the endPoint after starting it: 'http://localhost:8000/' or 'http://localhost:8000/drinks'
 * The FrameWork is already pre structured in folders
 
-### TEST_CASE1:
+------------------------------------------------------------------------------------------------------------------------
+### TEST_CASE1
 * Navigate to folder 'src/test/resources/features/a.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
-* Use STATIC values in the feature file to enrich the json body! Like, strings (emails & drinkNames) and int's
-* Use 'Scenario: 1 - create extra set of data' to create extra set of data >> Status is 201
-* Use 'Scenario: 2 - get extra set of data' to get and assert the extra set of data >> Status 200
-* Use 'Scenario: 3 - delete extra set of data and validate deletion' to delete and validate 'deletion' of the extra set data >> Status 204
+####Scenario: Create a new Drink object with static values, Get- & Delete the new object
+* GIVEN the Endpoint is running
+* WHEN I add a new (drink)product
+* THEN the product is available on the Endpoint with all the added fields (assertions)
+* WHEN I delete the added product
+* THEN the product is NOT available on the Endpoint (assertions)
 
-### TEST_CASE2:
+------------------------------------------------------------------------------------------------------------------------
+### TEST_CASE2
 * Navigate to folder 'src/main/java/utils/TestDataGenerator.java'
-* Use method 'generateDrink()' to write code which returns dynamic names (any String values)
-* Use method 'generateRandomEmail()' to write code which returns dynamic e-mail addresses 
-* Use method 'generateNextInt()' to write code which returns dynamic int values (int bound = 10)
+* Navigate to folder 'src/test/java/unitTest/UnitTests.java'
+* Use STATIC values (hardcoded) to enrich the json body
+####Scenario: Write methods to generate random- drink names, emails and Int values
+* GIVEN the project is imported and build without errors
+* WHEN I use method 'generateDrink()' to generate random drink names (String values)
+* THEN I expect random drink names are generated (write a unit test for this method)
+* WHEN I use method 'generateRandomEmail()' to generate random emails
+* THEN I expect random e-mails are generated (write a unit test for this method)
+* WHEN I use method 'generateNextInt()' to generate random Int values
+* THEN I expect random Int values are generated (write a unit test for this method)
 
-### TEST_CASE3:
-* Navigate to folder 'src/test/java/unitTest/UnitTests.java' 
-* Write unitTests for the methods from 'TEST_CASE2'
-
-### TEST_CASE4:
+------------------------------------------------------------------------------------------------------------------------
+### TEST_CASE3
 * Navigate to folder 'src/test/resources/features/b.Drink_CRUD.feature'
 * The json body in folder 'src/test/resources/inputData/newDrink.json' is used in te feature files!
-* Use DYNAMIC values in the feature file to enrich the json body! Use the previously created methods in class TestDataGenerator
-* Use 'Scenario: 1 - create extra set of data' to create extra set of data >> Status is 201
-* Use 'Scenario: 2 - get extra set of data' to get and assert the extra set of data >> Status 200
-* Use 'Scenario: 3 - delete extra set of data and validate deletion' to delete and validate 'deletion' of the extra set data >> Status 204
+* Use DYNAMIC values from the generated methods above to enrich the json body
+####Scenario: Create a new Drink object with static values, Get- & Delete the new object 
+* GIVEN the Endpoint is running
+* WHEN I add a new (drink)product
+* THEN the product is available on the Endpoint with all the added fields (assertions)
+* WHEN I delete the added product
+* THEN the product is NOT available on the Endpoint (assertions)
 
+------------------------------------------------------------------------------------------------------------------------
 ### TEST_CASE5:
 * Navigate to folder 'src/test/java/runners/TestRunnerKarate.java'
-* Use method 'testParallel()' to write code for the runner class
-* Run all your testcases with this runner class
+* Tip, write out the code in this class
+####Scenario: Run 'TEST_CASE3' via the TestRunnerKarate class
+* GIVEN the Endpoint is running
+* WHEN I run 'TEST_CASE3' via the TestRunnerKarate class
+* THEN the testcase has run
+* THEN karate report(s) are generated
 
+
+------------------------------------------------------------------------------------------------------------------------
 ### Finally
 * Push your code to your branche
 
