@@ -2,17 +2,22 @@ package runners;
 
 
 import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestRunnerKarate {
     public static Results results;
 
-    public static void testParallel() {
-        //TODO
-        //write your code here
+    @Test
+    public void testParallel() {
+        results = Runner.path("classpath:features").parallel(5);
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 
     public static void main(String[] args) {
-        TestRunnerKarate.testParallel();
+        new TestRunnerKarate().testParallel();
     }
 }
 

@@ -106,7 +106,7 @@ public class DemoApplicationTests {
     @Test
 //    Karate
     public void karateRun() throws InterruptedException {
-        TestRunnerKarate.testParallel();
+        new TestRunnerKarate().testParallel();
 
     }
 
