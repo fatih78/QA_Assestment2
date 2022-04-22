@@ -39,7 +39,7 @@ public class Drink {
     }
 
     public void setCountry(String country) {
-        this.origin = origin;
+        this.origin = country;
     }
     public String getCountry() {
         return origin;
