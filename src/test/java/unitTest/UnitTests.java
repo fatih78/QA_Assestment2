@@ -23,7 +23,7 @@ public class UnitTests {
 
     @Test
     public void generateRandomEmail() {
-        String email = TestDataGenerator.generateRandomEmail();
+        String email = TestDataGenerator.generateRandomEmail(5,4,3);
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
 
         Assert.assertNotNull(email);
@@ -31,11 +31,9 @@ public class UnitTests {
         Assert.assertEquals(email.getClass(), String.class);
     }
 
-
-
     @Test
     public void generateNextInt() {
-        Integer numericValue = TestDataGenerator.generateNextInt();
+        Integer numericValue = TestDataGenerator.generateNextInt(3);
 
         Assert.assertNotNull(numericValue);
         Assert.assertEquals(numericValue.getClass(), Integer.class);
