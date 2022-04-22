@@ -1,24 +1,45 @@
 package unitTest;
 
+import org.junit.Assert;
 import org.junit.Test;
+import utils.TestDataGenerator;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class UnitTests {
+    public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
     @Test
-    public void generateDrink() {
-        //TODO
+    public void generateDrinkName() {
+        String drinkName = TestDataGenerator.generateDrinkName(3);
+
+        Assert.assertNotNull(drinkName);
+        Assert.assertEquals(drinkName.getClass(), String.class);
+        Assert.assertEquals(drinkName.length(), 3);
     }
 
     @Test
     public void generateRandomEmail() {
-        //TODO
+        String email = TestDataGenerator.generateRandomEmail();
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+
+        Assert.assertNotNull(email);
+        Assert.assertTrue(matcher.find());
+        Assert.assertEquals(email.getClass(), String.class);
     }
+
 
 
     @Test
     public void generateNextInt() {
-        //TODO
+        Integer numericValue = TestDataGenerator.generateNextInt();
+
+        Assert.assertNotNull(numericValue);
+        Assert.assertEquals(numericValue.getClass(), Integer.class);
+        Assert.assertTrue(numericValue > 0);
     }
 
 

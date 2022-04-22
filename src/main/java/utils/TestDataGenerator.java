@@ -7,10 +7,8 @@ public class TestDataGenerator {
     }
 
 
-    public static String generateDrink() {
-        //TODO
-        //    write your code here
-        return "";
+    public static String generateDrinkName(int length) {
+        return generateString(length);
     }
 
 
@@ -24,6 +22,10 @@ public class TestDataGenerator {
         //TODO
         //    write your code here
         return 1;
+    }
+
+    private static String generateString(int length){
+        return "";
     }
 
 }
